@@ -7,7 +7,7 @@ recharts
 axios
 ```
 
-Этот сайт на (GitHub Pages)[https://venchass.github.io/abanking-app/]
+Этот сайт на [GitHub Pages][https://venchass.github.io/abanking-app/]
 
 
 Возможности:
