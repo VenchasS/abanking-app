@@ -1,4 +1,11 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
 body {
+  overflow-x:hidden;  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +18,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.recharts-wrapper{
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+.temperature-widget {
+  margin: auto;
+  margin-bottom: 50px;
+}
+.temperature-form input{
+  padding: 8px;
+  margin: 8px 0;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  width: 50%;
+  margin-left: 50px;
+}
+
+.widget{
+  background-color: rgb(108, 167, 69);
+  width: 200px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 8px;
+  min-width: 175px;
+  flex: 0 0 auto;
+}
+
+.widgets-container{
+  
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+}
+
+.green{
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;        
+  }
+  .green {
+  background-color: rgb( 43, 153, 91 );
+  border: 1px solid rgb( 33, 126, 74 );
+  }
+          
+  .green:hover {
+  background-color: rgb( 75, 183, 141 );
+  }
+
+  .current-info-table{
+    min-width: 320px;
+    padding: 10px 0;
+    margin: 0 10%;
+    border-radius: 25px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+
+  .current-info-table-text-block{
+    margin-right: 50px;
+    font-size: x-large;
+    font-style:italic;
+  }

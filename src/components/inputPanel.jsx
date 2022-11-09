@@ -5,7 +5,7 @@ import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { Saves } from "./Saves";
 
-const API_KEY = process.env.REACT_APP_API_KEY
+const API_KEY = "AIzaSyDyxsj5WH5E9vSlt5MReuZ4kM8gOwVGzc0"
 
 const containerStyle = {
     width: '1000px',
