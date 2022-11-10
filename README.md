@@ -1,6 +1,6 @@
 # React JS Weather App
 
-Зависимости: 
+## Зависимости: 
 ```
 react-google-maps/api 
 recharts
@@ -10,7 +10,7 @@ axios
 Посмотреть на этот сайт на [GitHub Pages](https://venchass.github.io/abanking-app/)
 
 
-Возможности:
+## Возможности:
 
 - Ручная настройка ширины и долготы
 - Просмотр координат на карте
