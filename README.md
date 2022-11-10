@@ -1,4 +1,4 @@
-###React JS Weather App
+# React JS Weather App
 
 Зависимости: 
 ```
@@ -7,7 +7,7 @@ recharts
 axios
 ```
 
-Этот сайт на GitHub Pages
+Этот сайт на [GitHub Pages](https://venchass.github.io/abanking-app/)
 
 
 Возможности:
