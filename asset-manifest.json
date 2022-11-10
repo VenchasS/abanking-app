@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/abanking-app/static/css/main.5f0a3ee3.css",
-    "main.js": "/abanking-app/static/js/main.76b5f443.js",
+    "main.css": "/abanking-app/static/css/main.70e0391b.css",
+    "main.js": "/abanking-app/static/js/main.a226f15d.js",
     "static/js/787.418d9949.chunk.js": "/abanking-app/static/js/787.418d9949.chunk.js",
     "static/media/snowfall.png": "/abanking-app/static/media/snowfall.e51b49473aad990bf439.png",
     "static/media/sunny.png": "/abanking-app/static/media/sunny.aaf8be891f850a514929.png",
     "static/media/rainy-day.png": "/abanking-app/static/media/rainy-day.eb91127bcc57ce6d951b.png",
     "index.html": "/abanking-app/index.html",
-    "main.5f0a3ee3.css.map": "/abanking-app/static/css/main.5f0a3ee3.css.map",
-    "main.76b5f443.js.map": "/abanking-app/static/js/main.76b5f443.js.map",
+    "main.70e0391b.css.map": "/abanking-app/static/css/main.70e0391b.css.map",
+    "main.a226f15d.js.map": "/abanking-app/static/js/main.a226f15d.js.map",
     "787.418d9949.chunk.js.map": "/abanking-app/static/js/787.418d9949.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f0a3ee3.css",
-    "static/js/main.76b5f443.js"
+    "static/css/main.70e0391b.css",
+    "static/js/main.a226f15d.js"
   ]
 }
