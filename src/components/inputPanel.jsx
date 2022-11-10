@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import { TemperatureWidget } from "./temperatureWidget";
 import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
@@ -26,12 +26,12 @@ export const WeatherApp = (props) => {
     const [latitude, setLatitude] = useState();
     const [longitude, setLongitude] = useState();
     const [temp, setTemp] = useState();
+    const [map, setMap] = useState(null)
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: API_KEY
     })
-    const [map, setMap] = React.useState(null)
-    const onLoad = React.useCallback(function callback(map) {
+    const onLoad = useCallback(function callback(map) {
         const bounds = new window.google.maps.LatLngBounds({
             lat: -3.745,
             lng: -38.523
@@ -39,14 +39,14 @@ export const WeatherApp = (props) => {
         map.fitBounds(bounds);
         setMap(map)
     }, [])
-    function handleCenterChanged() {
+    const handleCenterChanged = () => {
         if (!map) 
             return;
         const newPos = map.getCenter().toJSON();
         setLongitude( parseFloat(newPos.lng) );
         setLatitude(parseFloat(newPos.lat));
     }
-    const onUnmount = React.useCallback(function callback(map) {
+    const onUnmount = useCallback(function callback(map) {
         setMap(null)
     }, [])
     const updateMap = (latitude, longitude) => {
@@ -99,7 +99,7 @@ export const WeatherApp = (props) => {
                 <input type="button" value="В закладки" className="green" onClick={AddWidget} />
             </form>
             <TemperatureWidget value={temp} />
-            {isLoaded ? (<GoogleMap mapContainerStyle={containerStyle} zoom={0} onLoad={onLoad} onUnmount={onUnmount} onCenterChanged={handleCenterChanged}> </GoogleMap>
+            {isLoaded ? (<GoogleMap mapContainerStyle={containerStyle} zoom={0} onLoad={onLoad} onUnmount={onUnmount} onCenterChanged={handleCenterChanged}></GoogleMap>
             ) : <></>}
         </div>
     )
