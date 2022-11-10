@@ -1,11 +1,10 @@
-
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 import cloud_png from '../icons/cloud.png'
 import sunny_png from '../icons/sunny.png'
 import rain_png from '../icons/rainy-day.png'
 import snow_png from '../icons/snowfall.png'
 
-const weather_converter = {
+const weatherConverter = {
     0: "Чистое небо",
     1: "Mainly clear",
     2: "Partly cloudy",
@@ -37,7 +36,7 @@ const GetWeatherIcon = ({weathercode}) => {
     switch (weathercode) {
         case 0:
         case 1:
-            return  <img width={100} src={sunny_png} />
+            return  <img width={100} src={sunny_png} alt="sunny" />
         case 2:
         case 3:
         case 45:
@@ -45,7 +44,7 @@ const GetWeatherIcon = ({weathercode}) => {
         case 51:
         case 53:
         case 55:
-            return <img width={100} src={cloud_png} />
+            return <img width={100} src={cloud_png} alt="cloudy"/>
         case 56:
         case 57:
         case 61:
@@ -56,16 +55,16 @@ const GetWeatherIcon = ({weathercode}) => {
         case 80:
         case 81:
         case 82:
-            return <img width={100} src={rain_png} />
+            return <img width={100} src={rain_png} alt="rainy" />
         case 71:
         case 73:
         case 75:
         case 77:
         case 85:
         case 86:
-            return <img width={100} src={snow_png} />
+            return <img width={100} src={snow_png} alt="snowy"/>
         default:
-             return <img width={100} src={sunny_png} />
+             return <img width={100} src={sunny_png} alt="sunny" />
     }
 }
 
@@ -83,7 +82,7 @@ export const TemperatureWidget = ({value}) => {
                 amt: 24
             })
         }
-        weather.IsConverted = weather_converter.hasOwnProperty(value["current_weather"]["weathercode"]);
+        weather.IsConverted = weatherConverter.hasOwnProperty(value["current_weather"]["weathercode"]);
         weather.code = value["current_weather"]["weathercode"];
     }
 
@@ -99,7 +98,7 @@ export const TemperatureWidget = ({value}) => {
                 <div className='current-info-table-text-block'>
                     {`Текущая температура: ${value["current_weather"]["temperature"]} °C`} <br/>
                     Скорость ветра: {value["current_weather"]["windspeed"]} м.с <br/>
-                    {weather.IsConverted ? <>{weather_converter[weather.code]}</> : null}
+                    {weather.IsConverted ? <>{weatherConverter[weather.code]}</> : null}
                 </div>
                 <GetWeatherIcon weathercode={weather.code} />
             </div>

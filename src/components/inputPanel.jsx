@@ -56,7 +56,6 @@ export const WeatherApp = (props) => {
     const formSubmit = (event) => {
         axios.get(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=${"temperature_2m"}&current_weather=${"true"}&windspeed_unit=${"ms"}`)
         .then((res) => {
-            console.log(res.data);
             let currentTemp = res.data;
             setTemp(currentTemp);
         })
@@ -71,10 +70,17 @@ export const WeatherApp = (props) => {
         widgets.push(temp);
         setWidgets([...widgets]);
     }
+    const deleteWidget = (data) => {
+        const index = widgets.indexOf(data);
+        if (index > -1) { 
+            widgets.splice(index, 1); 
+            setWidgets([...widgets]);
+        }
+    }
     
     return(
         <div>
-            <Saves data={widgets} setTemp={setTemp} setLatitude={setLatitude} setLongitude={setLongitude} updateMap={updateMap}/>
+            <Saves data={widgets} setTemp={setTemp} setLatitude={setLatitude} setLongitude={setLongitude} updateMap={updateMap} deleteWidget={deleteWidget}/>
             <form onSubmit={formSubmit} className="temperature-form">
                 <label>
                     Широта:

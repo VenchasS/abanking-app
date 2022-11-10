@@ -38,15 +38,7 @@ code {
   margin-left: 50px;
 }
 
-.widget{
-  background-color: rgb(108, 167, 69);
-  width: 200px;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 8px;
-  min-width: 175px;
-  flex: 0 0 auto;
-}
+
 
 .widgets-container{
   
@@ -80,6 +72,37 @@ code {
           
   .green:hover {
   background-color: rgb( 75, 183, 141 );
+  cursor: pointer;
+
+  }
+
+  .widget{
+    background-color: rgb( 43, 153, 91 );
+
+    width: 200px;
+    border-radius: 10px 10px 0 0;
+    margin: 10px;
+    padding: 8px;
+    min-width: 175px;
+    margin-bottom: 0;
+    flex: 0 0 auto;
+  }
+
+  .red-btn{
+    background-color: rgb(170, 170, 170);
+    margin: 0 10px;
+    border-radius: 0 0 10px 10px;
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;  
+    padding-top: 4px;
+  }
+
+  .red-btn:hover{
+    background-color: rgb(179, 96, 96);
+    cursor: pointer;
+
   }
 
   .current-info-table{
@@ -99,3 +122,5 @@ code {
     font-size: x-large;
     font-style:italic;
   }
+
+ 
